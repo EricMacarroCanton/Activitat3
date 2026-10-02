@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0A0E21"
     android:padding="16dp"
     tools:context=".MainActivity">
 
@@ -12,11 +13,12 @@
         android:id="@+id/title_bmi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="B and O BMI CALCULATOR"
-        android:textSize="20sp"
-        android:textStyle="bold"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
+        android:text="B and O BMI CALCULATOR"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,9 +26,10 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/seleccio_home"
         android:layout_width="0dp"
-        android:layout_height="160dp"
+        android:layout_height="150dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="#1D1E33"
         app:layout_constraintEnd_toStartOf="@id/seleccio_dona"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_bmi">
@@ -38,15 +41,18 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:src="@drawable/baseline_male_24" />
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/baseline_male_24"
+                app:tint="#FFFFFF" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Home"
-                android:textSize="20sp" />
+                android:layout_marginTop="8dp"
+                android:text="MALE"
+                android:textColor="#8D8E98"
+                android:textSize="18sp" />
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
@@ -54,9 +60,10 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/seleccio_dona"
         android:layout_width="0dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="150dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#1D1E33"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/seleccio_home"
         app:layout_constraintTop_toBottomOf="@+id/title_bmi">
@@ -68,15 +75,18 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:src="@drawable/baseline_female_24" />
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/baseline_female_24"
+                app:tint="#FFFFFF" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dona"
-                android:textSize="20sp" />
+                android:layout_marginTop="8dp"
+                android:text="FEMALE"
+                android:textColor="#8D8E98"
+                android:textSize="18sp" />
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
@@ -84,8 +94,9 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/seleccio_altura"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="140dp"
         android:layout_marginTop="12dp"
+        app:cardBackgroundColor="#1D1E33"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seleccio_dona">
 
@@ -99,22 +110,26 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alçada"
-                android:textSize="18sp" />
+                android:text="HEIGHT"
+                android:textColor="#8D8E98"
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="160 cm"
-                android:textSize="24sp"
+                android:text="73 inches"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
             <com.google.android.material.slider.Slider
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                app:thumbHeight="24dp"
-                app:thumbWidth="24dp" />
+                app:thumbHeight="20dp"
+                app:thumbWidth="20dp"
+                app:trackColorActive="#FFFFFF"
+                app:trackColorInactive="#8D8E98" />
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
@@ -122,9 +137,10 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/pes"
         android:layout_width="0dp"
-        android:layout_height="180dp"
+        android:layout_height="160dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="#1D1E33"
         app:layout_constraintEnd_toStartOf="@id/edat"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/seleccio_altura">
@@ -139,16 +155,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pes"
-                android:textSize="18sp" />
+                android:text="WEIGHT"
+                android:textColor="#8D8E98"
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="60 Kg"
-                android:textSize="26sp"
+                android:text="170"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -158,16 +176,20 @@
 
                 <Button
                     style="?attr/materialIconButtonFilledStyle"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:text="-" />
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:backgroundTint="#4C4F5E"
+                    app:icon="@drawable/outline_check_indeterminate_small_24"
+                    />
 
                 <Button
                     style="?attr/materialIconButtonFilledStyle"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:layout_marginStart="12dp"
-                    android:text="+" />
+                    app:backgroundTint="#4C4F5E"
+                    app:icon="@drawable/outline_add_24"
+                  />
             </LinearLayout>
 
         </LinearLayout>
@@ -177,9 +199,10 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/edat"
         android:layout_width="0dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="12dp"
+        android:layout_height="160dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="#1D1E33"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/pes"
         app:layout_constraintTop_toBottomOf="@id/seleccio_altura">
@@ -194,16 +217,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Edat"
-                android:textSize="18sp" />
+                android:text="AGE"
+                android:textColor="#8D8E98"
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="10 anys"
-                android:textSize="26sp"
+                android:text="18"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -213,20 +238,36 @@
 
                 <Button
                     style="?attr/materialIconButtonFilledStyle"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:text="-" />
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:backgroundTint="#4C4F5E"
+                    app:icon="@drawable/outline_check_indeterminate_small_24"
+                    />
 
                 <Button
                     style="?attr/materialIconButtonFilledStyle"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:layout_marginStart="12dp"
-                    android:text="+" />
+                    app:backgroundTint="#4C4F5E"
+                    app:icon="@drawable/outline_add_24"
+                     />
             </LinearLayout>
 
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#9955BB"
+        android:text="CALCULATE"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
