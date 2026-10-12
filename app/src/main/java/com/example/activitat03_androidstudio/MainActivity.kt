@@ -2,15 +2,20 @@ package com.example.activitat03_androidstudio
 
 import android.graphics.Color
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.card.MaterialCardView
+import com.google.android.material.slider.Slider
 
 class MainActivity : AppCompatActivity() {
+    private var altura = 100
+    private var pes = 65
 
-    var home_selected: Boolean = false
+    private var home_selected: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +45,30 @@ class MainActivity : AppCompatActivity() {
             home_selected = false
         }
 
+        val sliderAltura: Slider = findViewById(R.id.slider_altura)
+        val txtAltura: TextView = findViewById(R.id.txt_altura)
 
+        sliderAltura.addOnChangeListener { _, value, _ ->
+            altura = value.toInt()
+            txtAltura.text = "$altura centimeters"
+        }
+
+        val txtPes: TextView = findViewById(R.id.txt_pes)
+        val btnPesMenys: Button = findViewById(R.id.btn_pes_menys)
+        val btnPesMes: Button = findViewById(R.id.btn_pes_mes)
+
+        btnPesMenys.setOnClickListener {
+            if (pes > 1) {
+                pes--
+                txtPes.text = "$pes Kg"
+            }
+        }
+
+        btnPesMes.setOnClickListener {
+            if (pes < 300) {
+                pes++
+                txtPes.text = "$pes Kg"
+            }
+        }
     }
 }

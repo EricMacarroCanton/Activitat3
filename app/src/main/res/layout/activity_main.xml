@@ -115,17 +115,21 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/txt_altura"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="140 centimeters"
+                android:text="100 centimeters"
                 android:textColor="#FFFFFF"
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
             <com.google.android.material.slider.Slider
+                android:id="@+id/slider_altura"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:valueFrom="100"
+                android:valueTo="230"
                 app:thumbHeight="20dp"
                 app:thumbWidth="20dp"
                 app:trackColorActive="#FFFFFF"
@@ -160,6 +164,7 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/txt_pes"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -175,6 +180,7 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/btn_pes_menys"
                     style="?attr/materialIconButtonFilledStyle"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
@@ -183,6 +189,7 @@
                     />
 
                 <Button
+                    android:id="@+id/btn_pes_mes"
                     style="?attr/materialIconButtonFilledStyle"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
