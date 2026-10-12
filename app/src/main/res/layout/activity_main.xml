@@ -229,6 +229,7 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/txt_edat"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -245,6 +246,7 @@
 
                 <Button
                     style="?attr/materialIconButtonFilledStyle"
+                    android:id="@+id/btn_edat_menys"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     app:backgroundTint="#4C4F5E"
@@ -253,6 +255,7 @@
 
                 <Button
                     style="?attr/materialIconButtonFilledStyle"
+                    android:id="@+id/btn_edat_mes"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="12dp"
@@ -266,6 +269,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <Button
+        android:id="@+id/btn_calcular"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:backgroundTint="#9955BB"

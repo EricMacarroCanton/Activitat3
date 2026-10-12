@@ -10,10 +10,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.slider.Slider
+import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
     private var altura = 100
     private var pes = 65
+
+    private var edat = 18
 
     private var home_selected: Boolean = false
 
@@ -69,6 +72,33 @@ class MainActivity : AppCompatActivity() {
                 pes++
                 txtPes.text = "$pes Kg"
             }
+        }
+        val txtEdat: TextView = findViewById(R.id.txt_edat)
+        val btnEdatMenys: Button = findViewById(R.id.btn_edat_menys)
+        val btnEdatMes: Button = findViewById(R.id.btn_edat_mes)
+
+        btnEdatMenys.setOnClickListener {
+            if (edat > 1) {
+                edat--
+                txtEdat.text = "$edat"
+            }
+        }
+
+        btnEdatMes.setOnClickListener {
+            if (edat < 120) {
+                edat++
+                txtEdat.text = "$edat"
+            }
+        }
+        val btnCalcular: Button = findViewById(R.id.btn_calcular)
+
+        btnCalcular.setOnClickListener {
+            val alturaM = altura / 100.0
+            val imc = pes / (alturaM * alturaM)
+
+            val intent = Intent(this, MainActivity2::class.java)
+            intent.putExtra("IMC", imc)
+            startActivity(intent)
         }
     }
 }
